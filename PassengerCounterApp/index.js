@@ -13,3 +13,14 @@ function decrement() {
     document.getElementById("total-number-of-people").innerHTML = count;
 }
 
+var previousEntriesEl = document.getElementById("Previous-entries")
+function save(){
+    previousEntriesEl.innerHTML += count + " - ";
+    document.getElementById("total-number-of-people").innerHTML = 0;
+    count = 0;
+}
+
+//this is an example of document object manipulation, AKA the DOM. In other words this is how javascript can change the webpage in an object oriented way 
+//note we consider the webpage as some object with data-type document.
+
+//lets a paragraph that display the previous entries 
