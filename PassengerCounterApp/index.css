@@ -1,0 +1,25 @@
+body{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(images/King\'s\ Cross\,\ London\ -\ A\ Colorful\ Guide\ to\ the\ King\'s\ Cross\ Area.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.text-box{
+    color: #fff;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    font-size: 50px;
+}
