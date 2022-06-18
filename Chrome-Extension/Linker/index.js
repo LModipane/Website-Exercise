@@ -1,9 +1,18 @@
 const saveLinkbtn = document.getElementById("save-link-btn");
 const deleteLinkbtn = document.getElementById("Delete-link-btn");
+const fetchURLbtn = document.getElementById("fetch-url-btn");
 const textField = document.getElementById("text-filed-el");
 const ulEl = document.getElementById("output-list");
 
 let myLinksArray = [];
+
+fetchURLbtn.addEventListener("click", function(){
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+        myLinksArray.push(tabs[0].url);
+        storeMyLinks(myLinksArray);
+        displayMyLinks(myLinksArray);
+    });
+})
 
 let mylinksFromLocalStorage = fetchFromStorage();
 if(mylinksFromLocalStorage){
@@ -51,7 +60,7 @@ function storeMyLinks(array){
     let arrayString = JSON.stringify(array);
     localStorage.setItem("myLinks", arrayString);
 }
+
 function fetchFromStorage(){
     return JSON.parse(localStorage.getItem("myLinks"));
 }
-

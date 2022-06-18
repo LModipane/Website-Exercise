@@ -1,9 +1,12 @@
 {
     "manifest_version": 3,
-    "version": "1.0",
+    "version": "1.1",
     "name": "linker fetcher",
     "action": {
         "default_popup": "index.html",
         "default_icon": "Linker Icon.png"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
