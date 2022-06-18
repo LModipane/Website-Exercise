@@ -5,3 +5,5 @@ function buyNow() {
     console.log(7);
     
 }
+
+buyNow();
